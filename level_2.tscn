@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c2bddkn4mplxh"]
+
+[ext_resource type="Script" uid="uid://pr084j27rbsx" path="res://scripts/camera_follow.gd" id="1_n7ypv"]
+[ext_resource type="Texture2D" uid="uid://c3wabemlgatfy" path="res://Scene1/1.png" id="2_0s5r2"]
+[ext_resource type="Texture2D" uid="uid://cnifsslj370fp" path="res://Scene1/2.png" id="3_7j8ne"]
+[ext_resource type="Texture2D" uid="uid://d1vcdcfyrsq7d" path="res://Scene1/3.png" id="4_7dov7"]
+[ext_resource type="Texture2D" uid="uid://f7o2lumv8l53" path="res://Scene1/4.png" id="5_ehv2h"]
+[ext_resource type="PackedScene" uid="uid://bht5nscjmo3of" path="res://Scene1/player.tscn" id="6_0s5r2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0s5r2"]
+size = Vector2(2302.75, 88)
+
+[node name="Level2" type="Node2D" unique_id=1131266057]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=616475631]
+position = Vector2(577, 346)
+script = ExtResource("1_n7ypv")
+target = NodePath("../Player2")
+
+[node name="Camera2D" type="Camera2D" parent="Camera2D" unique_id=754052533]
+script = ExtResource("1_n7ypv")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=442351822]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="Sky2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1170135031]
+position = Vector2(288.5, 173)
+motion_scale = Vector2(0.03, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky2" unique_id=2073784383]
+position = Vector2(284.5, -15)
+scale = Vector2(2, 1)
+texture = ExtResource("2_0s5r2")
+
+[node name="hill" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1091635973]
+position = Vector2(-338.5, -114.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/hill" unique_id=2012541418]
+position = Vector2(655, 336.5)
+scale = Vector2(1.115355, 1)
+texture = ExtResource("3_7j8ne")
+
+[node name="hill2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=296130888]
+position = Vector2(-338.5, -114.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/hill2" unique_id=2138317295]
+position = Vector2(1194.5, 336)
+scale = Vector2(1.027778, 1)
+texture = ExtResource("3_7j8ne")
+
+[node name="grassway" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2114077753]
+motion_scale = Vector2(0.03, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/grassway" unique_id=1744717374]
+position = Vector2(581, 219.5)
+scale = Vector2(2, 1)
+texture = ExtResource("4_7dov7")
+
+[node name="Grass" type="ParallaxLayer" parent="ParallaxBackground" unique_id=732390178]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Grass" unique_id=1308318231]
+position = Vector2(582.5, 197)
+scale = Vector2(2, 1)
+texture = ExtResource("5_ehv2h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1412199183]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1102232639]
+position = Vector2(1160, 619)
+shape = SubResource("RectangleShape2D_0s5r2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1604191062]
+
+[node name="Player2" parent="." unique_id=1856626699 instance=ExtResource("6_0s5r2")]
+position = Vector2(236, 442.99997)
+scale = Vector2(0.35, 0.35)

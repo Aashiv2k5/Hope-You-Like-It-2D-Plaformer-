@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cafwjycm18l48"]
+
+[ext_resource type="Texture2D" uid="uid://djsx5ssyce6gj" path="res://Scene1/Gemini_Generated_Image_eflplxeflplxeflp (1).png" id="1_cq4ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqhsa"]
+size = Vector2(56, 149)
+
+[node name="ladder" type="Area2D" unique_id=1737456931]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=54450225]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_lqhsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1509574172]
+position = Vector2(-4.999995, -3.695488e-06)
+scale = Vector2(0.2514881, 0.22526039)
+texture = ExtResource("1_cq4ai")

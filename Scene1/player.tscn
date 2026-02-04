@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bht5nscjmo3of"]
+
+[ext_resource type="Script" uid="uid://d8rpu7o21ddy" path="res://scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://1dhifbiu1dfo" path="res://Scene1/player.png" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(162, 240)
+
+[node name="Player" type="CharacterBody2D" unique_id=1856626699]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=170820755]
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258329853]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+volume_db = 10.0

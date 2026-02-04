@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cvporw50ebqdq"]
+
+[ext_resource type="Script" uid="uid://c5s6q5cu1y4uv" path="res://scripts/heart.gd" id="1_7p8dj"]
+[ext_resource type="Texture2D" uid="uid://bx71brqyq2r4g" path="res://heart.png" id="2_pembh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bjxl8"]
+radius = 133.544
+
+[node name="Heart" type="Area2D" unique_id=1885852393]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_7p8dj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=312597048]
+position = Vector2(5.000004, 17.000004)
+scale = Vector2(0.8938619, 0.91627544)
+texture = ExtResource("2_pembh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497000842]
+shape = SubResource("CircleShape2D_bjxl8")
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]

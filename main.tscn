@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://do6no5mehk0lr"]
+
+[ext_resource type="Script" uid="uid://pr084j27rbsx" path="res://scripts/camera_follow.gd" id="1_5vw27"]
+[ext_resource type="Texture2D" uid="uid://7glswk4s2tut" path="res://layers/sky.png" id="2_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cff37grt15wvg" path="res://layers/rocks.png" id="3_kek77"]
+[ext_resource type="Texture2D" uid="uid://cbrjg8pyajixk" path="res://layers/ground.png" id="4_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bcf87hlqhgeu8" path="res://chainsaw.tscn" id="5_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://debg21os40gu5" path="res://Scene1/board.png" id="5_efxa6"]
+[ext_resource type="PackedScene" uid="uid://cdlyrgcn6jq6j" path="res://Scene1/road.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://bht5nscjmo3of" path="res://Scene1/player.tscn" id="6_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://lwciaobup76a" path="res://Scene1/platform.tscn" id="7_w48qg"]
+[ext_resource type="PackedScene" uid="uid://cvporw50ebqdq" path="res://heart.tscn" id="8_vivmo"]
+[ext_resource type="PackedScene" uid="uid://fatjjgchx8sl" path="res://Scene1/message_popup.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://b8icpasrteoqb" path="res://Scene1/stem.tscn" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://e7cimka5g2y3" path="res://scripts/main.gd" id="12_main"]
+[ext_resource type="PackedScene" uid="uid://cafwjycm18l48" path="res://ladder.tscn" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://dinv4d44a3pgn" path="res://scripts/ladder.gd" id="14_w48qg"]
+[ext_resource type="PackedScene" uid="uid://dljyiulmd6xh7" path="res://Scene1/blocks.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" uid="uid://c8tlnshmspaa2" path="res://spring.tscn" id="17_074og"]
+[ext_resource type="Script" uid="uid://b74yx8hdih2wm" path="res://scripts/spring.gd" id="18_cegan"]
+[ext_resource type="PackedScene" uid="uid://cmy180red77il" path="res://touch_controls.tscn" id="19_cegan"]
+[ext_resource type="PackedScene" path="res://Scene1/heart_hud.tscn" id="20_heart_hud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg77c"]
+size = Vector2(72.25, 61.214844)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
+size = Vector2(803.5, 91.75)
+
+[node name="Main" type="Node2D" unique_id=1320815027]
+script = ExtResource("12_main")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1023919460]
+position = Vector2(577, 346)
+script = ExtResource("1_5vw27")
+target = NodePath("../Player")
+
+[node name="Camera2D" type="Camera2D" parent="Camera2D" unique_id=1937525216]
+script = ExtResource("1_5vw27")
+
+[node name="TouchControls" parent="." unique_id=1820698584 instance=ExtResource("19_cegan")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1893284593]
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1238741391]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="Sky2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=54390856]
+position = Vector2(262.5, 177.5)
+motion_scale = Vector2(0.03, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky2" unique_id=1469587170]
+position = Vector2(283, -21.5)
+scale = Vector2(0.6, 0.3)
+texture = ExtResource("2_5vw27")
+
+[node name="Clouds Bright3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1760601239]
+position = Vector2(280.5, 167.5)
+motion_scale = Vector2(0.03, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds Bright3" unique_id=2087512258]
+position = Vector2(267, 17.5)
+scale = Vector2(0.6, 0.3)
+texture = ExtResource("3_kek77")
+
+[node name="Clouds Dark3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=19839366]
+position = Vector2(-26, 20)
+motion_scale = Vector2(0.03, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds Dark3" unique_id=510273797]
+position = Vector2(571.5, 159)
+scale = Vector2(0.6, 0.3)
+texture = ExtResource("4_4c57u")
+
+[node name="Platform" parent="." unique_id=479700110 instance=ExtResource("7_w48qg")]
+position = Vector2(779, 347)
+
+[node name="Platform6" parent="." unique_id=1224927858 instance=ExtResource("7_w48qg")]
+position = Vector2(1065, 661)
+
+[node name="Platform4" parent="." unique_id=2143209251 instance=ExtResource("7_w48qg")]
+position = Vector2(1134, 473)
+
+[node name="Heart" parent="." unique_id=1885852393 instance=ExtResource("8_vivmo")]
+position = Vector2(1915.0001, 605)
+scale = Vector2(0.19999994, 0.19999996)
+message = "I hateeeeeeeeeesttttt You Vinodhini"
+
+[node name="Heart2" parent="." unique_id=867136594 instance=ExtResource("8_vivmo")]
+position = Vector2(1159, 432)
+message = "I hateeeeeer You "
+
+[node name="Heart3" parent="." unique_id=2101526260 instance=ExtResource("8_vivmo")]
+position = Vector2(801, 287)
+message = "I hate You "
+
+[node name="road" parent="." unique_id=1594173423 instance=ExtResource("5_kek77")]
+position = Vector2(-40, 684)
+scale = Vector2(0.4, 0.3)
+
+[node name="road2" parent="." unique_id=443679233 instance=ExtResource("5_kek77")]
+position = Vector2(1085.0001, 629)
+scale = Vector2(0.45, 0.3)
+
+[node name="Player" parent="." unique_id=1856626699 instance=ExtResource("6_ycdy4")]
+position = Vector2(34, 475)
+scale = Vector2(0.3, 0.3)
+
+[node name="Platform2" parent="." unique_id=1115276691 instance=ExtResource("11_efxa6")]
+position = Vector2(510, 725)
+scale = Vector2(1.5, 1.2)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=300409116]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Parallax2D" unique_id=386753437]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/StaticBody2D" unique_id=1444157820]
+position = Vector2(896.75, 657.625)
+scale = Vector2(0.49000007, 0.6227273)
+texture = ExtResource("5_efxa6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parallax2D/StaticBody2D" unique_id=1755140236]
+position = Vector2(911, 642.6074)
+shape = SubResource("RectangleShape2D_dg77c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parallax2D/StaticBody2D" unique_id=659254692]
+position = Vector2(876.125, 685.7383)
+shape = SubResource("RectangleShape2D_dg77c")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Parallax2D/StaticBody2D" unique_id=1604570404]
+position = Vector2(2065, 336)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_82xsv")
+
+[node name="MessagePopup" parent="." unique_id=783902500 instance=ExtResource("9_kek77")]
+visible = false
+
+[node name="HeartHUD" parent="." unique_id=1234567890 instance=ExtResource("20_heart_hud")]
+
+[node name="ladder" parent="." unique_id=1737456931 instance=ExtResource("13_ycdy4")]
+position = Vector2(549, 468)
+script = ExtResource("14_w48qg")
+
+[node name="blocks" parent="." unique_id=528309911 instance=ExtResource("15_vivmo")]
+position = Vector2(618, 392)
+scale = Vector2(2, 2)
+
+[node name="blocks4" parent="." unique_id=899538522 instance=ExtResource("15_vivmo")]
+position = Vector2(1488, 525)
+scale = Vector2(2, 2)
+
+[node name="blocks2" parent="." unique_id=476145060 instance=ExtResource("15_vivmo")]
+position = Vector2(690, 369)
+scale = Vector2(2, 2)
+
+[node name="blocks3" parent="." unique_id=1060022227 instance=ExtResource("15_vivmo")]
+position = Vector2(1302, 432)
+scale = Vector2(2, 2)
+
+[node name="chainsaw" parent="." unique_id=1929723231 instance=ExtResource("5_2cqfq")]
+position = Vector2(1079, 348.00003)
+scale = Vector2(0.3, 0.3)
+rotation_speed = 500.0
+
+[node name="ladder2" parent="." unique_id=655022238 instance=ExtResource("13_ycdy4")]
+position = Vector2(1366, 480)
+script = ExtResource("14_w48qg")
+
+[node name="spring" parent="." unique_id=292393104 instance=ExtResource("17_074og")]
+position = Vector2(1712, 601)
+scale = Vector2(2.5, 2)
+script = ExtResource("18_cegan")

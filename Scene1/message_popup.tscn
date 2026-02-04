@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://fatjjgchx8sl"]
+
+[ext_resource type="Script" uid="uid://c6cww4qmcr2pa" path="res://scripts/ui/message_popup.gd" id="1_cfb45"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_black"]
+bg_color = Color(0, 0, 0, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.3)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="MessagePopup" type="CanvasLayer" unique_id=617326980]
+script = ExtResource("1_cfb45")
+
+[node name="Panel" type="Panel" parent="." unique_id=1783708354]
+offset_left = 296.0
+offset_top = 188.0
+offset_right = 896.0
+offset_bottom = 280.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_black")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1082080997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=171753877]
+layout_mode = 2
+
+[node name="MessageLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=511462015]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "hey
+
+
+
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+autowrap_trim_flags = 64
+justification_flags = 160
+
+[node name="ContinueButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1196320294]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Continue ❤️"
+text_overrun_behavior = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+expand_icon = true
