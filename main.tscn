@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c8tlnshmspaa2" path="res://spring.tscn" id="17_074og"]
 [ext_resource type="Script" uid="uid://b74yx8hdih2wm" path="res://scripts/spring.gd" id="18_cegan"]
 [ext_resource type="PackedScene" uid="uid://cmy180red77il" path="res://touch_controls.tscn" id="19_cegan"]
-[ext_resource type="PackedScene" path="res://Scene1/heart_hud.tscn" id="20_heart_hud"]
+[ext_resource type="PackedScene" uid="uid://cq8xb3r4n5m2p" path="res://Scene1/heart_hud.tscn" id="20_heart_hud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dg77c"]
 size = Vector2(72.25, 61.214844)
@@ -86,15 +86,15 @@ position = Vector2(1134, 473)
 [node name="Heart" parent="." unique_id=1885852393 instance=ExtResource("8_vivmo")]
 position = Vector2(1915.0001, 605)
 scale = Vector2(0.19999994, 0.19999996)
-message = "I hateeeeeeeeeesttttt You Vinodhini"
+message = "or mandhi ok than"
 
 [node name="Heart2" parent="." unique_id=867136594 instance=ExtResource("8_vivmo")]
 position = Vector2(1159, 432)
-message = "I hateeeeeer You "
+message = "Waffle vangi kudu"
 
 [node name="Heart3" parent="." unique_id=2101526260 instance=ExtResource("8_vivmo")]
 position = Vector2(801, 287)
-message = "I hate You "
+message = "Place agita treat vaiiii"
 
 [node name="road" parent="." unique_id=1594173423 instance=ExtResource("5_kek77")]
 position = Vector2(-40, 684)
