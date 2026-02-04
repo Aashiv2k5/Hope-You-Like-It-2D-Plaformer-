@@ -21,6 +21,7 @@ radius = 108.19
 
 [node name="TouchControls" type="CanvasLayer" unique_id=1820698584]
 script = ExtResource("3_ep0mg")
+hide_on_desktop = true
 
 [node name="UpButton" type="TouchScreenButton" parent="." unique_id=1186427609]
 position = Vector2(184, 176)

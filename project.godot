@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Romantic Platformer"
+config/name="Hope You Like It"
 config/description="A heartfelt 2D platformer game"
 run/main_scene="uid://do6no5mehk0lr"
 config/features=PackedStringArray("4.6", "Forward Plus")
