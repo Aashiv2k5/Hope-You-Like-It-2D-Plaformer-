@@ -164,6 +164,11 @@ position = Vector2(1079, 348.00003)
 scale = Vector2(0.3, 0.3)
 rotation_speed = 500.0
 
+[node name="chainsaw2" parent="." unique_id=1251422705 instance=ExtResource("5_2cqfq")]
+position = Vector2(1021, 765)
+scale = Vector2(0.3, 0.3)
+rotation_speed = 500.0
+
 [node name="ladder2" parent="." unique_id=655022238 instance=ExtResource("13_ycdy4")]
 position = Vector2(1366, 480)
 script = ExtResource("14_w48qg")
