@@ -28,6 +28,7 @@ position = Vector2(184, 176)
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("1_qaoo7")
 shape = SubResource("RectangleShape2D_ep0mg")
+visibility_mode = 1
 
 [node name="DownButton" type="TouchScreenButton" parent="." unique_id=868367561]
 position = Vector2(272, 488)
@@ -35,6 +36,7 @@ rotation = 3.1415927
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("1_qaoo7")
 shape = SubResource("RectangleShape2D_ojhyh")
+visibility_mode = 1
 
 [node name="LeftButton" type="TouchScreenButton" parent="." unique_id=468459248]
 position = Vector2(64, 376)
@@ -42,6 +44,7 @@ rotation = -1.5707964
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("1_qaoo7")
 shape = SubResource("RectangleShape2D_qpxdh")
+visibility_mode = 1
 
 [node name="RightButton" type="TouchScreenButton" parent="." unique_id=92277744]
 position = Vector2(392, 280.00003)
@@ -49,9 +52,11 @@ rotation = 1.5707964
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("1_qaoo7")
 shape = SubResource("RectangleShape2D_rq6v7")
+visibility_mode = 1
 
 [node name="JumpButton" type="TouchScreenButton" parent="." unique_id=1246466844]
 position = Vector2(1115, 219)
 scale = Vector2(0.52301276, 0.4789273)
 texture_normal = ExtResource("2_ep0mg")
 shape = SubResource("CircleShape2D_rq6v7")
+visibility_mode = 1
